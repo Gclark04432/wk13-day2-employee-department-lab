@@ -48,4 +48,19 @@ class EmployeedepartmentlabApplicationTests {
 		projectRepository.save(project1);
 	}
 
+	@Test
+	public void canAddEmployeeToProject(){
+		Department department2 = new Department("IT");
+		departmentRepository.save(department2);
+
+		Employee employee2 = new Employee("Brian", "Smith", "A8746", department2);
+		employeeRepository.save(employee2);
+
+		Project project2 = new Project("Upgrade servers", 150);
+		projectRepository.save(project2);
+
+		project2.addEmployee(employee2);
+		projectRepository.save(project2);
+	}
+
 }

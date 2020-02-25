@@ -25,12 +25,12 @@ public class Project {
     @JoinTable(
             name = "employees_projects",
             joinColumns = {@JoinColumn(
-                    name = "projects_id",
+                    name = "project_id",
                     nullable = false,
                     updatable = false)
             },
             inverseJoinColumns = {@JoinColumn(
-                    name = "employees_id",
+                    name = "employee_id",
                     nullable = false,
                     updatable = false)
             }
