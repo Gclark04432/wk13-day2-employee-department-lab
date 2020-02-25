@@ -18,8 +18,7 @@ public class Employee {
     @Column
     private String employeeNumber;
 
-    public Employee(Long id, String firstName, String lastName, String employeeNumber) {
-        this.id = id;
+    public Employee(String firstName, String lastName, String employeeNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeNumber = employeeNumber;
